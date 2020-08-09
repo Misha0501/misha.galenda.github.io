@@ -1,0 +1,15 @@
+:root {
+  --main-color: rgb(255, 113, 40);
+}
+
+.services {
+  background-color: #f4f4f4;
+  padding-bottom: 20px;
+}
+.services__inner {
+  padding-top: 60px;
+}
+
+.portfolio {
+  /* background-color: #fff; */
+}

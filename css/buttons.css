@@ -1,0 +1,83 @@
+:root {
+  --main-color: rgb(255, 113, 40);
+}
+.btn {
+  background: none;
+  color: rgb(230, 230, 230);
+  width: 270px;
+  height: 60px;
+  border: 2px solid var(--main-color);
+  font-size: 20px;
+  border-radius: 35px;
+  transition: 0.7s;
+  overflow: hidden;
+}
+
+.btn:focus {
+  outline: none;
+}
+.btn:before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0.5s;
+  filter: blur(30px);
+  transform: translateX(-130px) skewX(-15deg);
+}
+.btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+  width: 30px;
+  height: 100%;
+  left: 30px;
+  top: 0;
+  opacity: 0;
+  filter: blur(30px);
+  transform: translateX(-100px) skewX(-15deg);
+}
+.btn:hover {
+  background: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+}
+.btn:hover:before {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 0.6;
+  transition: 0.7s;
+}
+.btn:hover:after {
+  transform: translateX(300px) skewX(-15deg);
+  opacity: 1;
+  transition: 0.7s;
+}
+.contact__btn {
+  color: var(--main-color);
+}
+.services__btn {
+  color: var(--main-color);
+}
+
+.form__button {
+  background-color: var(--main-color);
+  position: relative;
+  margin-right: 28px;
+}
+
+/* .form__button::before {
+  content: "";
+  position: absolute;
+  background-image: url(/images/phone-icon.svg);
+  z-index: 9999;
+} */
+
+@media (max-width: 500px) {
+  .btn {
+    /* font-size: 18px; */
+  }
+}

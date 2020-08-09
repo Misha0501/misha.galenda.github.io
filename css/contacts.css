@@ -1,0 +1,165 @@
+:root {
+  --main-color: rgb(255, 113, 40);
+}
+
+.contact__page {
+  background-color: #f4f4f4;
+}
+.contact__page__inner {
+  padding-top: 135px;
+  padding-bottom: 60px;
+}
+
+.contact__page__title {
+  padding-bottom: 60px;
+  color: var(--main-color);
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.contact__page__info {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts__page__item {
+  width: 25%;
+  text-align: center;
+}
+.contact__page__icon {
+  max-width: 45px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.contact__page__icon img {
+  width: 100%;
+}
+
+.contact__page__phone a {
+  color: var(--main-color);
+  font-weight: bold;
+}
+.contact__page__form {
+  padding-bottom: 50px;
+}
+.contact__page__form__title {
+  position: relative;
+  text-align: center;
+  padding-bottom: 60px;
+  color: var(--main-color);
+  font-size: 30px;
+  line-height: 45px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.contact__page__form__title::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 292px;
+  top: 23px;
+  left: 0;
+  background-color: var(--main-color);
+}
+
+.contact__page__form__title::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 292px;
+  top: 23px;
+  right: 0;
+  background-color: var(--main-color);
+}
+
+.form__top {
+  display: flex;
+  justify-content: space-between;
+}
+.form__top__item {
+  width: 30%;
+}
+.form__top input {
+  width: 100%;
+  padding: 16px 16px 16px 40px;
+}
+
+.input__name::before {
+  top: 10px;
+  left: 6px;
+}
+
+.input__email {
+  position: relative;
+}
+.input__email::before {
+  content: "";
+  position: absolute;
+  top: 11px;
+  left: 6px;
+  height: 28px;
+  width: 28px;
+  background-image: url(/images/email.svg);
+  background-size: 28px 28px;
+}
+
+.input__phone::before {
+  top: 10px;
+  left: 6px;
+}
+.input__message {
+  margin: 0 auto;
+}
+.input__message::before {
+  top: 10px;
+  left: 6px;
+}
+
+.input__message textarea {
+  width: 100%;
+  padding: 16px 16px 100px 40px;
+  /* border: none; */
+  resize: none;
+}
+
+.contact__button {
+  /* position: static; */
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+#thankyou_message {
+  width: 100%;
+  /* display: inline-block; */
+  margin-top: 40px;
+  border-radius: 1px;
+}
+
+@media (max-width: 1120px) {
+  .contact__page__form__title::before {
+    width: 220px;
+    top: 23px;
+  }
+  .contact__page__form__title::after {
+    width: 220px;
+  }
+}
+
+@media (max-width: 990px) {
+  .contact__page__form__title::before {
+    display: none;
+  }
+  .contact__page__form__title::after {
+    display: none;
+  }
+}
+@media (max-width: 547px) {
+  .form__top {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .form__top__item {
+    width: 100%;
+  }
+}
